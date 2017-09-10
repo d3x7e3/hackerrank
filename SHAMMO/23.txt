@@ -1,0 +1,46 @@
+https://www.hackerrank.com/challenges/30-review-loop
+
+
+#include <cmath>
+#include <cstring>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include<iomanip>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    string S;
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        cin>>S; 
+        for(int i = 0; i <S.size() ; i++)
+        {
+            if(i%2==0) 
+            {
+            cout<<S[i];
+            }
+        }
+         
+        cout<<" ";
+        
+        for(int i = 0; i <S.size() ; i++)
+        {
+            if(i%2==1)
+            {
+            cout<<S[i];
+            }
+        }
+        
+        cout<<endl;
+        
+     } 
+    
+    
+    return 0;
+}
+

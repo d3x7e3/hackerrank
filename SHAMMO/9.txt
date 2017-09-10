@@ -1,0 +1,34 @@
+https://www.hackerrank.com/challenges/birthday-cake-candles
+
+
+#include <bits/stdc++.h>
+#include<algorithm>
+#include<iostream>
+#include <cstdio>
+
+using namespace std;
+int main() 
+{
+    int n;
+    int count=0;
+    cin >> n;
+    int ar[n];
+    for(int i = 0; i < n; i++)
+    {
+       cin >> ar[i];
+    }
+    sort(ar, ar+n,greater<int>());
+    int max;
+    max=ar[0];
+    
+    for(int i=0; i<n; i++)
+    {
+        if(max==ar[i])
+        {
+            count++;
+        }
+    }
+    
+    cout<<count;
+    return 0;
+}

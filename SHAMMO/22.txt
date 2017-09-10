@@ -1,0 +1,31 @@
+https://www.hackerrank.com/challenges/the-power-sum
+
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+
+
+int findPowerSum(int number, int power, int num)
+{
+    int value = number - pow(num, power);
+    
+    if(value < 0) return 0;
+    else if(value == 0) return 1;
+    else return findPowerSum(value , power, num + 1) +
+    			findPowerSum(number, power, num+1);
+}
+
+int main() { 
+    int n;
+    int p;
+    cin >> n;
+    cin >> p;
+    cout << findPowerSum(n, p, 1);
+    return 0;
+}

@@ -1,0 +1,30 @@
+https://www.hackerrank.com/challenges/migratory-birds/problem
+
+
+#include<iostream>
+using namespace std;
+ 
+int main(){
+    int n; 
+    cin>>n;
+    int types[n];
+    for(int types_i = 0; types_i < n; types_i++){
+       cin>>types[types_i];
+    }
+    int id[]={0,0,0,0,0};            // This array stores the frequency of bird type
+    for(int i = 0; i<n; i++)
+        {
+            id[types[i]-1]++;
+        }
+    int max=0,type= 0;          //max gives the largest element of array id i.e. the most common bird
+    for(int j=0; j<5; j++)
+        {
+        if(id[j]>id[max])
+            {
+            max=j;
+                    }
+        
+    }
+    cout<<(max+1);
+    return 0;
+}
